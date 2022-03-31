@@ -1,0 +1,67 @@
+/* @font-face {
+  font-family: "PodFonts-Mono";
+  src: url("/releases/v1.0.0/fonts/PodFonts-Mono.eot?652u9v");
+  src: url("/releases/v1.1.0/fonts/PodFonts-Mono.eot?652u9v#iefix")
+      format("embedded-opentype"),
+    url("/releases/v1.1.0/fonts/PodFonts-Mono.ttf?652u9v") format("truetype"),
+    url("/releases/v1.1.0/fonts/PodFonts-Mono.woff?652u9v") format("woff"),
+    url("/releases/v1.1.0/fonts/PodFonts-Mono.svg?652u9v#PodFonts-Mono")
+      format("svg");
+  font-weight: normal;
+  font-style: sans;
+} */
+/* #not-logged-in-homepage-wrapper {
+  display: grid;
+  gap: 0.2rem;
+} */
+main {
+  display: grid;
+  height: 600px;
+  gap: 0.2rem;
+}
+.topic-not-logged-in-homepage-wrapper {
+  display: grid;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x400_b1ee52328fda25e96e5dbffa7b4fc93e_800.jpg");
+}
+.topic-not-logged-in-homepage {
+  display: grid;
+  place-content: end;
+  backdrop-filter: blur(15px) brightness(50%);
+  cursor: pointer;
+}
+.topic-not-logged-in-homepage:hover h1 {
+  transform: translate(-200px);
+  transition: 1s;
+}
+.topic-not-logged-in-homepage h1 {
+  display: grid;
+  place-content: center;
+  color: whitesmoke;
+  padding-right: 2rem;
+  font-size: 70px;
+  transition-duration: 0.5s;
+}
+.best-tracks-not-logged-in-homepage-wrapper {
+  display: grid;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x4002_06ccf9f496cbaebd70fed67fdd46438b_800.jpg");
+}
+.best-tracks-not-logged-in-homepage {
+  display: grid;
+  justify-content: start;
+  align-content: end;
+
+  backdrop-filter: blur(15px) brightness(70%);
+  cursor: pointer;
+}
+.best-tracks-not-logged-in-homepage h2 {
+  display: grid;
+  place-content: center;
+  color: whitesmoke;
+  padding-left: 2rem;
+  font-size: 40px;
+  transition-duration: 0.5s;
+}
+.best-tracks-not-logged-in-homepage:hover h2 {
+  transform: translate(200px);
+  transition: 1s;
+}

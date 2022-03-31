@@ -1,0 +1,78 @@
+#not-logged-in-homepage-wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  height: 100vh;
+}
+header {
+  display: grid;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-20190301-1200x400_def5c56e52bbcb6edd19329476bc3208_800.jpg");
+}
+#header-wrapper {
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  gap: 4rem;
+  padding-top: 1rem;
+  height: 340px;
+  width: 1fr;
+  backdrop-filter: blur(15px);
+}
+#search-section-wrapper {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, auto);
+  width: 1200px;
+  gap: 3rem;
+}
+#search-input {
+  display: grid;
+  width: 1000px;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 100;
+  padding-left: 1rem;
+  border-radius: 3px;
+  border: none;
+}
+#mag-glasss-button {
+  display: grid;
+  place-content: center;
+  width: 150px;
+}
+#lower-header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-content: space-between;
+}
+#h1-wrapper {
+  display: grid;
+  grid-template-rows: auto;
+}
+header h1 {
+  display: grid;
+  align-items: center;
+  font-size: 75px;
+  position: relative;
+  top: 55px;
+  color: whitesmoke;
+  /* font-family: "PodFonts-Mono"; */
+  cursor: pointer;
+}
+#login-signup-wrapper-homepage {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  align-content: end;
+  font-size: 23px;
+  font-weight: 900;
+  padding-right: 2px;
+}
+#login-link-homepage {
+  cursor: pointer;
+}
+#signup-link-homepage {
+  cursor: pointer;
+}
+#slash {
+  color: white;
+}

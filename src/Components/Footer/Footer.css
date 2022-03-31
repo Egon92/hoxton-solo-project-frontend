@@ -1,0 +1,134 @@
+footer {
+  background-color: #081520da;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+#left-footer {
+  display: grid;
+  justify-content: start;
+  align-content: start;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+#left-footer h2 {
+  display: grid;
+  color: whitesmoke;
+  text-align: start;
+}
+#ridecast-description {
+  display: grid;
+  text-align: start;
+  color: rgba(245, 245, 245, 0.833);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#footer-app-store-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-content: start;
+  gap: 2rem;
+}
+#footer-app-store-buttons button {
+  font-size: 11px;
+  border-radius: 25px;
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  cursor: pointer;
+}
+#ios-logo-font,
+#android-logo-font,
+#amazon-logo-font {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+#ios-logo-wrapper {
+  display: grid;
+  place-content: center;
+  height: 100%;
+}
+#ios-logo {
+  display: grid;
+  place-content: center;
+  height: 15px;
+}
+#android-logo-wrapper {
+  display: grid;
+  place-content: center;
+  height: 100%;
+}
+#android-logo {
+  height: 15px;
+}
+#alexa-logo-wrapper {
+  display: grid;
+  place-content: center;
+  height: 100%;
+}
+#alexa-logo {
+  height: 15px;
+}
+#ios-up-font,
+#android-up-font,
+#amazon-up-font {
+  font-size: 9px;
+}
+#ios-down-font,
+#android-down-font,
+#amazon-down-font {
+  font-size: 13px;
+}
+#footer-author-rights {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  place-content: start;
+  gap: 1rem;
+  color: rgba(245, 245, 245, 0.801);
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#footer-author-rights span:hover {
+  color: orange;
+}
+#right-footer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  align-content: center;
+  gap: 4rem;
+  font-size: 14px;
+  color: rgba(245, 245, 245, 0.842);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#footer-about-app-list {
+  list-style: none;
+  display: grid;
+  place-content: start;
+  gap: 2rem;
+}
+#footer-about-app-list li {
+  display: grid;
+  place-content: start;
+}
+#footer-app-contact-list {
+  list-style: none;
+  display: grid;
+  gap: 2rem;
+}
+#footer-app-contact-list li {
+  display: grid;
+  place-content: start;
+}
+#right-footer li {
+  cursor: pointer;
+}
+#right-footer li:hover {
+  color: orange;
+}
