@@ -1,3 +1,27 @@
-#login-and-signup-page-wrapper img {
-  height: 200px;
+#login-and-signup-page-wrapper {
+  background-image: url("https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg");
+  display: grid;
+  width: 1fr;
+}
+#login-and-signup-page-header-wrapper {
+  display: grid;
+  height: 300px;
+  align-content: end;
+  justify-content: start;
+  padding-left: 2rem;
+  backdrop-filter: blur(20px);
+}
+#login-and-signup-page-h1-wrapper h1 {
+  display: grid;
+  font-size: 75px;
+  color: green;
+}
+#login-and-signup-main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  backdrop-filter: blur(20px);
+  place-content: center;
+  height: 1000px;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
 }

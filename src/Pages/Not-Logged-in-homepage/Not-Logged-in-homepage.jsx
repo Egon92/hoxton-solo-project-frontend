@@ -1,8 +1,10 @@
+import Header from "../../Components/Header/Header";
 import "./Not-Logged-in-homepage.css";
 
 function NotLoggedInHomepage() {
   return (
     <div id="not-logged-in-homepage-wrapper">
+      <Header />
       <main>
         <div className="topic-not-logged-in-homepage-wrapper">
           <div className="topic-not-logged-in-homepage">

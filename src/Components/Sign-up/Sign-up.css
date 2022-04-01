@@ -1,0 +1,30 @@
+#signup-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 0.25fr);
+  height: 1000px;
+  place-content: end;
+  gap: 1rem;
+}
+#signup-form {
+  display: grid;
+  gap: 1rem;
+  width: 300px;
+  height: 350px;
+}
+#signup-form input {
+  box-shadow: 2px 3px 4px 2px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+}
+#signup-label {
+  display: grid;
+  place-content: start;
+  font-size: 50px;
+  /* position: relative; */
+  /* bottom: 60px; */
+  font-weight: 900;
+}
+#signup-label span {
+  font-size: 20px;
+}

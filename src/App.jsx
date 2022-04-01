@@ -8,12 +8,10 @@ import Topics from "./Pages/Topics-page/Topics-page";
 import PlaylistAndLikesPage from "./Pages/Playlist-and-likes-page/Playlist-and-likes-page";
 import ProfilePage from "./Pages/Profile-page/Profile-page";
 import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
         <Route path="/" element={<NotLoggedInHomepage />} />
         <Route path="/login" element={<LogInAndSignUpPage />} />
