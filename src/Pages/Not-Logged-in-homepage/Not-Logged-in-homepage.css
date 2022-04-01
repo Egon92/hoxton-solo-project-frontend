@@ -1,19 +1,9 @@
-/* @font-face {
-  font-family: "PodFonts-Mono";
-  src: url("/releases/v1.0.0/fonts/PodFonts-Mono.eot?652u9v");
-  src: url("/releases/v1.1.0/fonts/PodFonts-Mono.eot?652u9v#iefix")
-      format("embedded-opentype"),
-    url("/releases/v1.1.0/fonts/PodFonts-Mono.ttf?652u9v") format("truetype"),
-    url("/releases/v1.1.0/fonts/PodFonts-Mono.woff?652u9v") format("woff"),
-    url("/releases/v1.1.0/fonts/PodFonts-Mono.svg?652u9v#PodFonts-Mono")
-      format("svg");
-  font-weight: normal;
-  font-style: sans;
-} */
-/* #not-logged-in-homepage-wrapper {
+#not-logged-in-homepage-wrapper {
   display: grid;
+  grid-template-rows: repeat(3, auto);
+  height: 100vh;
   gap: 0.2rem;
-} */
+}
 main {
   display: grid;
   height: 600px;
