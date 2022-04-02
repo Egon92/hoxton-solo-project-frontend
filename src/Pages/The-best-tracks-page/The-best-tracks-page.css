@@ -1,0 +1,98 @@
+.bestTracks-homepage-wrapper {
+  display: grid;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x4002_06ccf9f496cbaebd70fed67fdd46438b_800.jpg");
+  width: 100%;
+}
+#bestTracks-header-wrapper {
+  display: grid;
+}
+#bestTracks-header {
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  gap: 4rem;
+  padding-top: 1rem;
+  height: 340px;
+  width: 1fr;
+  backdrop-filter: blur(25px) brightness(70%);
+}
+#bestTracks-search-section-wrapper {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, auto);
+  width: 1200px;
+  gap: 3rem;
+}
+#bestTracks-search-input {
+  display: grid;
+  width: 1000px;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 100;
+  padding-left: 1rem;
+  border-radius: 3px;
+  border: none;
+}
+#mag-glasss-button {
+  display: grid;
+  place-content: center;
+  width: 150px;
+}
+#bestTracks-lower-header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-content: space-between;
+}
+#bestTracks-h1-wrapper {
+  display: grid;
+  grid-template-rows: auto;
+}
+#bestTracks-h1-wrapper h1 {
+  display: grid;
+  align-items: center;
+  font-size: 75px;
+  position: relative;
+  top: 55px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+#bestTracks-profile-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  align-content: end;
+  font-size: 23px;
+  font-weight: 900;
+  padding-right: 2px;
+  color: white;
+}
+.bestTracks-main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  height: 600px;
+  backdrop-filter: blur(25px) brightness(70%);
+}
+.bestTracks-main-left-wrapper {
+  display: grid;
+  width: 300px;
+  align-content: end;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 2rem;
+}
+.bestTracks-main-right-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1rem;
+  padding: 1rem;
+  overflow: scroll;
+}
+.bestTracks-main-right-wrapper img {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+#bestTracks-wrapper:hover span {
+  transform: translateY(-100px);
+}

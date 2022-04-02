@@ -1,0 +1,93 @@
+#profile-page-wrapper {
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x4007_b309e8c4f601c79c0874bc7f116d2ef4_800.jpg");
+  display: grid;
+  width: 1fr;
+}
+#profile-page-header-wrapper {
+  display: grid;
+  height: 300px;
+  align-content: end;
+  justify-content: start;
+  padding-left: 2rem;
+  backdrop-filter: blur(10px) brightness(60%);
+}
+#profile-page-h1-wrapper h1 {
+  display: grid;
+  font-size: 75px;
+  color: rgb(255, 255, 255);
+}
+#profile-page-main-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  backdrop-filter: blur(20px);
+  justify-content: center;
+  align-content: start;
+  height: 800px;
+  backdrop-filter: blur(10px) brightness(60%);
+}
+#profile-page-main-profile-items-section {
+  display: grid;
+  width: 500px;
+  gap: 3rem;
+  padding-top: 5rem;
+}
+#profile-page-main-profile-pic-and-username {
+  display: grid;
+  place-content: center;
+  gap: 10px;
+}
+#profile-page-main-profile-pic {
+  display: grid;
+  place-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#profile-page-main-profile-username {
+  display: grid;
+  place-content: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+#profile-page-main-profile-shows-wrapper {
+  display: grid;
+  height: 60px;
+  place-content: start;
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+#profile-page-main-profile-shows-wrapper span {
+  display: grid;
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+  padding-left: 1rem;
+}
+#profile-page-main-profile-episodes-wrapper {
+  display: grid;
+  height: 70px;
+  place-content: start;
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+#profile-page-main-profile-episodes-wrapper span {
+  display: grid;
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+  padding-left: 1rem;
+}
+#profile-page-main-profile-likes-wrapper {
+  display: grid;
+  height: 70px;
+  place-content: start;
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+#profile-page-main-profile-likes-wrapper span {
+  display: grid;
+  font-size: 50px;
+  font-weight: 900;
+  color: white;
+  padding-left: 1rem;
+}
