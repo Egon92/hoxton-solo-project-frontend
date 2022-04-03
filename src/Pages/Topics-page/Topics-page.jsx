@@ -37,61 +37,16 @@ function Topics() {
           <span>topics</span>
         </div>
         <div className="topics-main-right-wrapper">
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
-          <img
-            id="topic-wrapper"
-            src="https://www.rd.com/wp-content/uploads/2021/05/GettyImages-1271148946-e1620838088898.jpg"
-            alt=""
-          />
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
+          <span className="topic-name">topic Name</span>
         </div>
       </div>
     </div>

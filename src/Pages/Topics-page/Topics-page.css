@@ -89,11 +89,13 @@
   padding: 1rem;
   overflow: scroll;
 }
-.topics-main-right-wrapper img {
+.topic-name {
+  display: grid;
+  place-content: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
   height: 200px;
   width: 200px;
   cursor: pointer;
-}
-#topic-wrapper:hover span {
-  transform: translateY(-100px);
 }

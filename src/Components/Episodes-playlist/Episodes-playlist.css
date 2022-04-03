@@ -1,0 +1,41 @@
+.episodes-playlist-and-likes-main-right-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  width: 800px;
+  gap: 1rem;
+  padding-top: 2rem;
+  overflow: scroll;
+}
+.episodes-playlist-and-likes-main-right-item-wrapper {
+  display: grid;
+  height: 100px;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x4007_b309e8c4f601c79c0874bc7f116d2ef4_800.jpg");
+}
+.episodes-playlist-and-likes-main-right-item {
+  display: grid;
+  width: 100%;
+  justify-content: start;
+  align-content: center;
+  gap: 1rem;
+  padding-left: 1rem;
+  backdrop-filter: blur(10px);
+}
+.episode-description-number-title-author-dateAdded-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  color: rgb(0, 0, 0);
+  gap: 1rem;
+  grid-auto-flow: column;
+  width: 350px;
+  align-content: end;
+}
+.episode-description-number,
+.episode-description-number,
+.episode-description-title,
+.episode-description-author,
+.episode-description-dateAdded {
+  display: grid;
+  justify-content: start;
+  font-weight: 700;
+  font-size: 20px;
+}

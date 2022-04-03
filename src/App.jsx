@@ -8,6 +8,8 @@ import Topics from "./Pages/Topics-page/Topics-page";
 import PlaylistAndLikesPage from "./Pages/Playlist-and-likes-page/Playlist-and-likes-page";
 import ProfilePage from "./Pages/Profile-page/Profile-page";
 import Footer from "./Components/Footer/Footer";
+import ShowsPage from "./Pages/Shows-page/Shows-page";
+import EpisodesPage from "./Pages/Episodes-page/Episodes-page";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path="/best" element={<BestTracksPage />} />
         <Route path="/topics" element={<Topics />} />
         <Route path="/selected" element={<PlaylistAndLikesPage />} />
+        <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/episodes" element={<EpisodesPage />} />
+        <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
       <Footer />
     </div>
