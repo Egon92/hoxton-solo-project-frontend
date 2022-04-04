@@ -1,0 +1,69 @@
+.add-to-episodes-playlist-modal-wrapper {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+}
+.add-to-episodes-playlist-modal {
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  height: 400px;
+  width: 300px;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x4007_b309e8c4f601c79c0874bc7f116d2ef4_800.jpg");
+}
+.close-modal-button-wrapper {
+  display: grid;
+  justify-content: end;
+  align-content: start;
+  height: 31px;
+}
+#close-modal-button {
+  display: grid;
+  place-content: center;
+  border: none;
+}
+.add-to-episodes-playlist-form {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  gap: 2rem;
+  font-weight: 700;
+  height: 350px;
+  backdrop-filter: blur(2px);
+  color: white;
+}
+.add-to-new-episode-playlist-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  width: 300px;
+  gap: 0.5rem;
+}
+.add-to-new-episode-playlist-label {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
+  height: 30px;
+}
+.add-to-existing-episode-playlist-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  place-content: start;
+  width: 300px;
+  gap: 0.5rem;
+  height: 250px;
+}
+.add-to-existing-episode-playlist {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 220px 80px;
+  align-content: center;
+  text-align: start;
+  width: 100%;
+  height: 30px;
+}
+.add-to-existing-episode-playlist-text {
+  display: grid;
+  height: 30px;
+}

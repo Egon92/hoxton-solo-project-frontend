@@ -1,0 +1,152 @@
+.episode-homepage-wrapper {
+  display: grid;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x4003_db4a7f5b80013a9fba5f2f82d0abb90f_800.jpg");
+  width: 100%;
+}
+#episode-header-wrapper {
+  display: grid;
+}
+#episode-header {
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  gap: 4rem;
+  padding-top: 1rem;
+  height: 340px;
+  width: 1fr;
+  backdrop-filter: blur(25px) brightness(70%);
+}
+#episode-search-section-wrapper {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, auto);
+  width: 1200px;
+  gap: 3rem;
+}
+#episode-search-input {
+  display: grid;
+  width: 1000px;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 100;
+  padding-left: 1rem;
+  border-radius: 3px;
+  border: none;
+}
+#mag-glasss-button {
+  display: grid;
+  place-content: center;
+  width: 150px;
+}
+#episode-lower-header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-content: space-between;
+}
+#episode-h1-wrapper {
+  display: grid;
+  grid-template-rows: auto;
+}
+#episode-h1-wrapper h1 {
+  display: grid;
+  align-items: center;
+  font-size: 75px;
+  position: relative;
+  top: 55px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+#episode-profile-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  align-content: end;
+  font-size: 23px;
+  font-weight: 900;
+  padding-right: 2px;
+  color: white;
+}
+.episode-main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /* place-content: space-between; */
+  /* justify-content: space-between; */
+  height: 600px;
+  backdrop-filter: blur(25px) brightness(70%);
+}
+.episode-main-left-wrapper {
+  display: grid;
+  width: 300px;
+  align-content: start;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+.episode-main-right-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  /* place-content: center; */
+  width: 100%;
+  gap: 1rem;
+  padding-top: 2rem;
+  overflow: scroll;
+}
+.episode-main-right-item-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  width: 500px;
+  height: 600px;
+  background-image: url("https://cdn.polymash.com/wp-content/uploads/2019/03/PM-Podcast-Cover-Art-Color-Choices-1-1200x4009_f65d30d9ac6010af2f5920e810990205_800.jpg");
+}
+.episode-main-right-item {
+  display: grid;
+  gap: 3rem;
+  justify-content: center;
+  align-content: start;
+  width: 100%;
+  backdrop-filter: blur(25px) brightness(90%);
+}
+.episode-main-right-item-number-title-and-audio {
+  display: grid;
+  place-content: center;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+.episode-number-and-title {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: start;
+  gap: 1rem;
+}
+.episode-number {
+  display: grid;
+  font-size: 30px;
+}
+.episode-title {
+  display: grid;
+  align-content: center;
+  font-size: 20px;
+}
+.episode-audio {
+  display: grid;
+  width: 450px;
+}
+.episode-main-right-item-dateAdded-length-likeButton-numberofLikes-addToPlaylist {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  gap: 5px;
+}
+.episode-main-right-item-description {
+  display: grid;
+  place-content: center;
+}
+.episode-description {
+  display: grid;
+  place-content: center;
+  font-size: 20px;
+  text-align: start;
+  padding: 0 1rem;
+}
