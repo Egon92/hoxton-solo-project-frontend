@@ -17,7 +17,7 @@ function LogInAndSignUpPage(props) {
       </div>
       <div id="login-and-signup-main-wrapper">
         <Signup setUser={props.setUser} />
-        <Login />
+        <Login setUser={props.setUser} />
       </div>
     </div>
   );
