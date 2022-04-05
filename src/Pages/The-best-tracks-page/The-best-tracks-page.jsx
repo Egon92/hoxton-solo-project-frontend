@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./The-best-tracks-page.css";
 
 function BestTracksPage() {
@@ -17,18 +18,21 @@ function BestTracksPage() {
           </div>
 
           <div id="bestTracks-lower-header">
-            <span id="bestTracks-h1-wrapper">
-              <h1>RideCAST</h1>
-            </span>
-
-            <div id="bestTracks-profile-wrapper">
-              <span id="bestTracks-username">Profile</span>
-              <img
-                src=".../assets/account_circle_white_36dp.svg"
-                alt=""
-                id="bestTracks-pic"
-              />
-            </div>
+            <Link to={"/profile/home"}>
+              <span id="bestTracks-h1-wrapper">
+                <h1>RideCAST</h1>
+              </span>
+            </Link>
+            <Link to={"/profile"}>
+              <div id="bestTracks-profile-wrapper">
+                <span id="bestTracks-username">Profile</span>
+                <img
+                  src=".../assets/account_circle_white_36dp.svg"
+                  alt=""
+                  id="bestTracks-pic"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

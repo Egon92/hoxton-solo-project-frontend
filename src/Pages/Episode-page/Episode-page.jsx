@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Episode-page.css";
 
 function EpisodePage() {
@@ -17,18 +18,21 @@ function EpisodePage() {
           </div>
 
           <div id="episode-lower-header">
-            <span id="episode-h1-wrapper">
-              <h1>RideCAST</h1>
-            </span>
-
-            <div id="episode-profile-wrapper">
-              <span id="episode-username">Profile</span>
-              <img
-                src=".../assets/account_circle_white_36dp.svg"
-                alt=""
-                id="episode-pic"
-              />
-            </div>
+            <Link to={"/profile/home"}>
+              <span id="episode-h1-wrapper">
+                <h1>RideCAST</h1>
+              </span>
+            </Link>
+            <Link to={"/profile"}>
+              <div id="episode-profile-wrapper">
+                <span id="episode-username">Profile</span>
+                <img
+                  src=".../assets/account_circle_white_36dp.svg"
+                  alt=""
+                  id="episode-pic"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
@@ -19,12 +20,13 @@ function Header() {
           <span id="h1-wrapper">
             <h1>RideCAST</h1>
           </span>
-
-          <span id="login-signup-wrapper-homepage">
-            <span id="login-link-homepage">Log in</span>
-            <span id="slash">/</span>
-            <span id="signup-link-homepage">Sign up</span>
-          </span>
+          <Link to={"/login"}>
+            <span id="login-signup-wrapper-homepage">
+              <span id="login-link-homepage">Log in</span>
+              <span id="slash">/</span>
+              <span id="signup-link-homepage">Sign up</span>
+            </span>
+          </Link>
         </div>
       </div>
     </header>

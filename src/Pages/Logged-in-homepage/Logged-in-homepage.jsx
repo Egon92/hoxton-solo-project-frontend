@@ -1,6 +1,14 @@
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import "./Logged-in-homepage.css";
 
-function LoggedInHomepage() {
+function LoggedInHomepage(props) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!props.user) {
+      navigate("/");
+    }
+  }, [props.user]);
   return (
     <div className="loggedin-homepage-wrapper">
       <div id="loggedin-header-wrapper">
@@ -17,40 +25,49 @@ function LoggedInHomepage() {
           </div>
 
           <div id="loggedin-lower-header">
-            <span id="loggedin-h1-wrapper">
-              <h1>RideCAST</h1>
-            </span>
-
-            <div id="loggedin-profile-wrapper">
-              <span id="loggedin-username">Profile</span>
-              <img
-                src=".../assets/account_circle_white_36dp.svg"
-                alt=""
-                id="loggedin-pic"
-              />
-            </div>
+            <Link to={"/profile/home"}>
+              <span id="loggedin-h1-wrapper">
+                <h1>RideCAST</h1>
+              </span>
+            </Link>
+            <Link to={"/profile"}>
+              <div id="loggedin-profile-wrapper">
+                <span id="loggedin-username">Profile</span>
+                <img
+                  src=".../assets/account_circle_white_36dp.svg"
+                  alt=""
+                  id="loggedin-pic"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
       <div className="loggedin-main-wrapper">
         <div className="loggedin-main-left-wrapper">
-          <div className="loggedin-main-left-center-wrapper">
-            <div className="loggedin-main-left-center">
-              <span>yours selected</span>
+          <Link to={"/selected"}>
+            <div className="loggedin-main-left-center-wrapper">
+              <div className="loggedin-main-left-center">
+                <span>yours selected</span>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="loggedin-main-right-wrapper">
-          <div className="loggedin-main-top-right-wrapper">
-            <div className="loggedin-main-top-right">
-              <span>topics</span>
+          <Link to={"/topics"}>
+            <div className="loggedin-main-top-right-wrapper">
+              <div className="loggedin-main-top-right">
+                <span>topics</span>
+              </div>
             </div>
-          </div>
-          <div className="loggedin-main-top-bottom-wrapper">
-            <div className="loggedin-main-top-bottom">
-              <span>what's the best now</span>
+          </Link>
+          <Link to={"/best"}>
+            <div className="loggedin-main-top-bottom-wrapper">
+              <div className="loggedin-main-top-bottom">
+                <span>what's the best now</span>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

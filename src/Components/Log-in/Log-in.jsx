@@ -1,6 +1,7 @@
 import "./Log-in.css";
 
 function Login() {
+  function handleLogin() {}
   return (
     <div id="login-wrapper">
       <span id="login-label">

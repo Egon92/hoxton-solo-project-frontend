@@ -1,6 +1,15 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Topics-page.css";
 
 function Topics() {
+  const [topics, setTopics] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/topics")
+      .then((resp) => resp.json())
+      .then((topics) => setTopics(topics));
+    console.log(topics);
+  }, []);
   return (
     <div className="topics-homepage-wrapper">
       <div id="topics-header-wrapper">
@@ -17,18 +26,21 @@ function Topics() {
           </div>
 
           <div id="topics-lower-header">
-            <span id="topics-h1-wrapper">
-              <h1>RideCAST</h1>
-            </span>
-
-            <div id="topics-profile-wrapper">
-              <span id="topics-username">Profile</span>
-              <img
-                src=".../assets/account_circle_white_36dp.svg"
-                alt=""
-                id="topics-pic"
-              />
-            </div>
+            <Link to={"/profile/home"}>
+              <span id="topics-h1-wrapper">
+                <h1>RideCAST</h1>
+              </span>
+            </Link>
+            <Link to={"/profile"}>
+              <div id="topics-profile-wrapper">
+                <span id="topics-username">Profile</span>
+                <img
+                  src=".../assets/account_circle_white_36dp.svg"
+                  alt=""
+                  id="topics-pic"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -37,16 +49,11 @@ function Topics() {
           <span>topics</span>
         </div>
         <div className="topics-main-right-wrapper">
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
-          <span className="topic-name">topic Name</span>
+          {topics.map((topic) => (
+            <span key={topic.id} className="topic-name">
+              {topic.name}
+            </span>
+          ))}
         </div>
       </div>
     </div>

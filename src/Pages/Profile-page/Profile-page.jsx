@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Profile-page.css";
 
 function ProfilePage() {
@@ -5,9 +6,11 @@ function ProfilePage() {
     <div id="profile-page-wrapper">
       <div id="profile-page-header-wrapper">
         <div id="profile-page-header">
-          <span id="profile-page-h1-wrapper">
-            <h1>RideCAST</h1>
-          </span>
+          <Link to={"/profile/home"}>
+            <span id="profile-page-h1-wrapper">
+              <h1>RideCAST</h1>
+            </span>
+          </Link>
         </div>
       </div>
       <div id="profile-page-main-wrapper">
@@ -18,15 +21,21 @@ function ProfilePage() {
             </div>
             <span id="profile-page-main-profile-username">Profile</span>
           </div>
-          <div id="profile-page-main-profile-shows-wrapper">
-            <span>your shows</span>
-          </div>
-          <div id="profile-page-main-profile-episodes-wrapper">
-            <span>your episodes</span>
-          </div>
-          <div id="profile-page-main-profile-likes-wrapper">
-            <span>your preferences</span>
-          </div>
+          <Link to={"/selected"}>
+            <div id="profile-page-main-profile-shows-wrapper">
+              <span>your shows</span>
+            </div>
+          </Link>
+          <Link to={"/selected"}>
+            <div id="profile-page-main-profile-episodes-wrapper">
+              <span>your episodes</span>
+            </div>
+          </Link>
+          <Link to={"/selected"}>
+            <div id="profile-page-main-profile-likes-wrapper">
+              <span>your preferences</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

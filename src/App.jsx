@@ -14,21 +14,29 @@ import Episode from "./Pages/Episode-page/Episode-page";
 import EpisodePage from "./Pages/Episode-page/Episode-page";
 import AddToShowsPlaylistModal from "./Modals/Add-to-shows-playlist-modal/Add-to-shows-playlist-modal";
 import AddToEpisodesPlaylistModal from "./Modals/Add-to-episodes-playlist-modal/Add-to-episodes-playlist-modal";
+import { useState } from "react";
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<NotLoggedInHomepage />} />
-        <Route path="/login" element={<LogInAndSignUpPage />} />
-        <Route path="/profile/home" element={<LoggedInHomepage />} />
+        <Route
+          path="/login"
+          element={<LogInAndSignUpPage setUser={setUser} />}
+        />
+        <Route
+          path="/profile/home"
+          element={<LoggedInHomepage user={user} />}
+        />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/best" element={<BestTracksPage />} />
         <Route path="/topics" element={<Topics />} />
         <Route path="/selected" element={<PlaylistAndLikesPage />} />
         <Route path="/shows" element={<ShowsPage />} />
         <Route path="/episodes" element={<EpisodesPage />} />
-        <Route path="/episodes/id" element={<EpisodePage />} />
+        <Route path="/episodes/:id" element={<EpisodePage />} />
         <Route path="/modal1" element={<AddToShowsPlaylistModal />} />
         <Route path="/modal2" element={<AddToEpisodesPlaylistModal />} />
         <Route path="*" element={<h1>Page not found</h1>} />

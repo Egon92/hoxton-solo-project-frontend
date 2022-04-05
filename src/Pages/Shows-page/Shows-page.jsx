@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Shows-page.css";
 
 function ShowsPage() {
+  const [shows, setShows] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/shows")
+      .then((resp) => resp.json())
+      .then((shows) => setShows(shows));
+  }, []);
   return (
     <div className="shows-homepage-wrapper">
       <div id="shows-header-wrapper">
@@ -17,18 +25,21 @@ function ShowsPage() {
           </div>
 
           <div id="shows-lower-header">
-            <span id="shows-h1-wrapper">
-              <h1>RideCAST</h1>
-            </span>
-
-            <div id="shows-profile-wrapper">
-              <span id="shows-username">Profile</span>
-              <img
-                src=".../assets/account_circle_white_36dp.svg"
-                alt=""
-                id="shows-pic"
-              />
-            </div>
+            <Link to={"/profile/home"}>
+              <span id="shows-h1-wrapper">
+                <h1>RideCAST</h1>
+              </span>
+            </Link>
+            <Link to={"/profile"}>
+              <div id="shows-profile-wrapper">
+                <span id="shows-username">Profile</span>
+                <img
+                  src=".../assets/account_circle_white_36dp.svg"
+                  alt=""
+                  id="shows-pic"
+                />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -37,7 +48,7 @@ function ShowsPage() {
           <span>topic name</span>
         </div>
         <div className="shows-main-right-wrapper">
-          <div className="shows-main-right-item-wrapper">
+          {/* <div className="shows-main-right-item-wrapper">
             <div className="shows-main-right-item">
               <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
                 <span className="show-title">Title</span>
@@ -148,7 +159,23 @@ function ShowsPage() {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
+          {shows.map((show) => (
+            <div className="shows-main-right-item-wrapper">
+              <div className="shows-main-right-item">
+                <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
+                  <span className="show-title">{show.title}</span>
+                  <span className="show-topic">{show.mediaProvider}</span>
+                  <span className="show-likeIcon">
+                    <img id="like-icon" src="" alt="like-icon" />
+                  </span>
+                  <span className="show-addToPlaylist">
+                    Add to your shows-playlist
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
