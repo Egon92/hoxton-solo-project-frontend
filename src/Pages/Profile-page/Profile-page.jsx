@@ -17,7 +17,11 @@ function ProfilePage() {
         <div id="profile-page-main-profile-items-section">
           <div id="profile-page-main-profile-pic-and-username">
             <div id="profile-page-main-profile-pic">
-              <img id="profile-page-profile-pic" src="" alt="Profile-pic" />
+              <img
+                id="profile-page-profile-pic"
+                src="/public/assets/account_circle_white_36dp.svg"
+                alt="Profile-pic"
+              />
             </div>
             <span id="profile-page-main-profile-username">Profile</span>
           </div>

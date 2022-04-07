@@ -27,7 +27,7 @@ function BestTracksPage() {
               <div id="bestTracks-profile-wrapper">
                 <span id="bestTracks-username">Profile</span>
                 <img
-                  src=".../assets/account_circle_white_36dp.svg"
+                  src="public/assets/account_circle_white_36dp.svg"
                   alt=""
                   id="bestTracks-pic"
                 />

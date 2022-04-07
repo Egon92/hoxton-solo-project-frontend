@@ -43,6 +43,10 @@
   height: 150px;
   border-radius: 50%;
 }
+#profile-page-profile-pic {
+  display: grid;
+  width: 150px;
+}
 #profile-page-main-profile-username {
   display: grid;
   place-content: center;

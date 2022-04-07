@@ -30,7 +30,7 @@ function PlaylistAndLikesPage() {
               <div id="playlist-and-likes-profile-wrapper">
                 <span id="playlist-and-likes-username">Profile</span>
                 <img
-                  src=".../assets/account_circle_white_36dp.svg"
+                  src="public/assets/account_circle_white_36dp.svg"
                   alt=""
                   id="playlist-and-likes-pic"
                 />
@@ -85,10 +85,7 @@ function PlaylistAndLikesPage() {
           </div>
         </div>
 
-        {/* {true ? <ShowsPlaylist /> : <EpisodesPlaylist />} */}
-
-        {/* <ShowsPlaylist /> */}
-        {/* <EpisodesPlaylist /> */}
+        {true ? <ShowsPlaylist /> : <EpisodesPlaylist />}
       </div>
     </div>
   );

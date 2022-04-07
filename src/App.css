@@ -5,6 +5,7 @@
 }
 * {
   outline: solid black 1px;
+  text-decoration: none;
 }
 .App-logo {
   height: 40vmin;

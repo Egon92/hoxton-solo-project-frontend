@@ -24,7 +24,7 @@ function EpisodesPage() {
             <div id="episodes-profile-wrapper">
               <span id="episodes-username">Profile</span>
               <img
-                src=".../assets/account_circle_white_36dp.svg"
+                src="public/assets/account_circle_white_36dp.svg"
                 alt=""
                 id="episodes-pic"
               />

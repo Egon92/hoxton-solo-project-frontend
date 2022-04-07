@@ -34,7 +34,7 @@ function LoggedInHomepage(props) {
               <div id="loggedin-profile-wrapper">
                 <span id="loggedin-username">Profile</span>
                 <img
-                  src=".../assets/account_circle_white_36dp.svg"
+                  src="public/assets/account_circle_white_36dp.svg"
                   alt=""
                   id="loggedin-pic"
                 />

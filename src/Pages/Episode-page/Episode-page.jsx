@@ -27,9 +27,9 @@ function EpisodePage() {
               <div id="episode-profile-wrapper">
                 <span id="episode-username">Profile</span>
                 <img
-                  src=".../assets/account_circle_white_36dp.svg"
-                  alt=""
                   id="episode-pic"
+                  src="http://localhost:4000/10.73-_Zenos_Revolution_Master_.mp3"
+                  alt=""
                 />
               </div>
             </Link>
@@ -50,10 +50,10 @@ function EpisodePage() {
                 </div>
                 <audio
                   className="episode-audio"
-                  src=".../assets/radiolab_podcast040122_inheritance.mp3"
+                  src="public/assets/10.73-_Zenos_Revolution_Master_.mp3"
                   controls
                 >
-                  Episode audio
+                  <code>audio</code> element.
                 </audio>
               </div>
               <div className="episode-main-right-item-dateAdded-length-likeButton-numberofLikes-addToPlaylist">
