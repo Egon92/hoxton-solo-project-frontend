@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Shows-page.css";
 
-function ShowsPage() {
-  const [shows, setShows] = useState([]);
+function ShowsPage(props) {
+  const [topic, setTopic] = useState(null);
+  const params = useParams();
   useEffect(() => {
-    fetch("http://localhost:3000/shows")
+    fetch(`http://localhost:4000/topics/${params.topicId}`)
       .then((resp) => resp.json())
-      .then((shows) => setShows(shows));
+      .then((topic) => setTopic(topic));
   }, []);
+  if (topic === null) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <div className="shows-homepage-wrapper">
       <div id="shows-header-wrapper">
@@ -45,123 +49,15 @@ function ShowsPage() {
       </div>
       <div className="shows-main-wrapper">
         <div className="shows-main-left-wrapper">
-          <span>topic name</span>
+          <span>{topic.name}</span>
         </div>
         <div className="shows-main-right-wrapper">
-          {/* <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="shows-main-right-item-wrapper">
-            <div className="shows-main-right-item">
-              <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="show-title">Title</span>
-                <span className="show-topic">Author</span>
-                <span className="show-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="show-addToPlaylist">
-                  Add to your shows-playlist
-                </span>
-              </div>
-            </div>
-          </div> */}
-          {shows.map((show) => (
-            <div className="shows-main-right-item-wrapper">
+          {topic.shows.map((show) => (
+            <Link
+              key={show.id}
+              className="shows-main-right-item-wrapper"
+              to={`/shows/${show.id}`}
+            >
               <div className="shows-main-right-item">
                 <div className="show-title-topic-likeIcon-addToPlaylist-wrapper">
                   <span className="show-title">{show.title}</span>
@@ -174,7 +70,7 @@ function ShowsPage() {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

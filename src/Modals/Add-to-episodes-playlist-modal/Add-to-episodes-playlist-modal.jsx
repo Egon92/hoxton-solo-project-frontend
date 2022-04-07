@@ -1,6 +1,6 @@
 import "./Add-to-episodes-playlist-modal.css";
 
-function AddToEpisodesPlaylistModal() {
+function AddToEpisodesPlaylistModal(props) {
   return (
     <div className="add-to-episodes-playlist-modal-wrapper">
       <div className="add-to-episodes-playlist-modal">

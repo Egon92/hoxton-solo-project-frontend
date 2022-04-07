@@ -1,6 +1,18 @@
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import "./Episodes-page.css";
 
-function EpisodesPage() {
+function EpisodesPage(props) {
+  const [show, setShow] = useState(null);
+  const params = useParams();
+  useEffect(() => {
+    fetch(`http://localhost:4000/shows/${params.showId}`)
+      .then((resp) => resp.json())
+      .then((show) => setShow(show));
+  }, [params.showId]);
+  if (show === null) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <div className="episodes-homepage-wrapper">
       <div id="episodes-header-wrapper">
@@ -34,137 +46,39 @@ function EpisodesPage() {
       </div>
       <div className="episodes-main-wrapper">
         <div className="episodes-main-left-wrapper">
-          <span>show title</span>
+          <span>{show.title}</span>
         </div>
         <div className="episodes-main-right-wrapper">
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">1</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">2</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">3</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">4</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">5</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">6</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">7</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="episodes-main-right-item-wrapper">
-            <div className="episodes-main-right-item">
-              <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
-                <span className="episode-number">8</span>
-                <span className="episode-title">Title</span>
-                <span className="episode-topic">Author</span>
-                <span className="episode-dateAdded">Date Added</span>
-                <span className="episode-likeIcon">
-                  <img id="like-icon" src="" alt="like-icon" />
-                </span>
-                <span className="episode-addToPlaylist">
-                  Add to your episodes playlist
-                </span>
-              </div>
-            </div>
-          </div>
+          {show.episodes.map((episode) => {
+            return (
+              <Link
+                key={episode.id}
+                className="episodes-main-right-item-wrapper"
+                to={`/episodes/${episode.id}`}
+              >
+                <div className="episodes-main-right-item">
+                  <div className="episode-title-topic-likeIcon-addToPlaylist-wrapper">
+                    <span className="episode-number"></span>
+                    <span className="episode-title">{episode.title}</span>
+                    <span className="episode-topic">{episode.author}</span>
+                    <span className="episode-dateAdded">
+                      {episode.dateAdded}
+                    </span>
+                    <span className="episode-likeIcon">
+                      <img
+                        id="like-icon"
+                        src="/thumb_up_white_24dp.svg"
+                        alt="like-icon"
+                      />
+                    </span>
+                    <span className="episode-addToPlaylist">
+                      Add to your episodes playlist
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

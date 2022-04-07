@@ -50,9 +50,13 @@ function Topics() {
         </div>
         <div className="topics-main-right-wrapper">
           {topics.map((topic) => (
-            <span key={topic.id} className="topic-name">
+            <Link
+              key={topic.id}
+              className="topic-name"
+              to={`/topics/${topic.id}`}
+            >
               {topic.name}
-            </span>
+            </Link>
           ))}
         </div>
       </div>

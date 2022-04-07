@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./The-best-tracks-page.css";
 
-function BestTracksPage() {
+function BestTracksPage(props) {
   return (
     <div className="bestTracks-homepage-wrapper">
       <div id="bestTracks-header-wrapper">

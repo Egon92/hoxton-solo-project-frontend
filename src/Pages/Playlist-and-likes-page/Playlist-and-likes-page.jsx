@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import EpisodesPlaylist from "../../Components/Episodes-playlist/Episodes-playlist";
 import ShowsPlaylist from "../../Components/Shows-playlist/Shows-playlist";
 import "./Playlist-and-likes-page.css";
 
-function PlaylistAndLikesPage() {
-  const boolean = true;
+function PlaylistAndLikesPage(props) {
+  const [selected, setSelected] = useState("your shows");
   return (
     <div className="playlist-and-likes-homepage-wrapper">
       <div id="playlist-and-likes-header-wrapper">
@@ -40,52 +41,60 @@ function PlaylistAndLikesPage() {
         </div>
       </div>
       <div className="playlist-and-likes-main-wrapper">
+        {/* ------------------------------------------------------------------------- */}
         <div className="playlist-and-likes-main-left-wrapper">
-          {true ? (
-            <div className="playlist-and-likes-main-top-left-wrapper">
-              <span
-                style={{ backgroundColor: "green", color: "yellow" }}
-                className="playlist-and-likes-main-top-left-your-shows"
-              >
-                your shows
-              </span>
-              <span className="playlist-and-likes-main-top-left-your-liked-shows">
-                liked shows
-              </span>
-              <span className="playlist-and-likes-main-top-left-your-episodes">
-                your episodes
-              </span>
-              <span className="playlist-and-likes-main-top-left-your-liked-episodes">
-                liked episodes
-              </span>
-            </div>
-          ) : (
-            <div className="playlist-and-likes-main-top-left-wrapper">
-              <span className="playlist-and-likes-main-top-left-your-shows">
-                your shows
-              </span>
-              <span className="playlist-and-likes-main-top-left-your-liked-shows">
-                liked shows
-              </span>
-              <span
-                style={{ backgroundColor: "green", color: "yellow" }}
-                className="playlist-and-likes-main-top-left-your-episodes"
-              >
-                your episodes
-              </span>
-
-              <span className="playlist-and-likes-main-top-left-your-liked-episodes">
-                liked episodes
-              </span>
-            </div>
-          )}
-
-          <div className="playlist-and-likes-main-bottom-left-wrapper">
+          <div className="playlist-and-likes-main-top-left-wrapper">
+            <span
+              className={`playlist-and-likes-main-top-left-your-shows ${
+                selected === "your shows" ? "selected" : ""
+              }`}
+              onClick={() => {
+                setSelected("your shows");
+              }}
+            >
+              your shows
+            </span>
+            <span
+              className={`playlist-and-likes-main-top-left-your-liked-shows ${
+                selected === "liked shows" ? "selected" : ""
+              }`}
+              onClick={() => {
+                setSelected("liked shows");
+              }}
+            >
+              liked shows
+            </span>
+            <span
+              className={`playlist-and-likes-main-top-left-your-episodes ${
+                selected === "your episodes" ? "selected" : ""
+              }`}
+              onClick={() => {
+                setSelected("your episodes");
+              }}
+            >
+              your episodes
+            </span>
+            <span
+              className={`playlist-and-likes-main-top-left-your-liked-episodes ${
+                selected === "liked episodes" ? "selected" : ""
+              }`}
+              onClick={() => {
+                setSelected("liked episodes");
+              }}
+            >
+              liked episodes
+            </span>
+          </div>
+          {/*---------------------------------------------------------------------------------- */}
+          <div className={`playlist-and-likes-main-bottom-left-wrapper`}>
             <span>yours selected</span>
           </div>
         </div>
 
-        {true ? <ShowsPlaylist /> : <EpisodesPlaylist />}
+        {selected === "your shows" ? <ShowsPlaylist /> : null}
+        {selected === "liked shows" ? null : null}
+        {selected === "your episodes" ? <EpisodesPlaylist /> : null}
+        {selected === "liked episodes" ? null : null}
       </div>
     </div>
   );

@@ -10,7 +10,6 @@ import ProfilePage from "./Pages/Profile-page/Profile-page";
 import Footer from "./Components/Footer/Footer";
 import ShowsPage from "./Pages/Shows-page/Shows-page";
 import EpisodesPage from "./Pages/Episodes-page/Episodes-page";
-import Episode from "./Pages/Episode-page/Episode-page";
 import EpisodePage from "./Pages/Episode-page/Episode-page";
 import AddToShowsPlaylistModal from "./Modals/Add-to-shows-playlist-modal/Add-to-shows-playlist-modal";
 import AddToEpisodesPlaylistModal from "./Modals/Add-to-episodes-playlist-modal/Add-to-episodes-playlist-modal";
@@ -30,15 +29,31 @@ function App() {
           path="/profile/home"
           element={<LoggedInHomepage user={user} />}
         />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/best" element={<BestTracksPage />} />
+        {/* {if (props.user){
+
+          
+        }} */}
+        <Route path="/profile" element={<ProfilePage user={user} />} />
+        <Route path="/best" element={<BestTracksPage user={user} />} />
         <Route path="/topics" element={<Topics />} />
-        <Route path="/selected" element={<PlaylistAndLikesPage />} />
-        <Route path="/shows" element={<ShowsPage />} />
-        <Route path="/episodes" element={<EpisodesPage />} />
-        <Route path="/episodes/:id" element={<EpisodePage />} />
-        <Route path="/modal1" element={<AddToShowsPlaylistModal />} />
-        <Route path="/modal2" element={<AddToEpisodesPlaylistModal />} />
+        <Route
+          path="/selected"
+          element={<PlaylistAndLikesPage user={user} />}
+        />
+        <Route path="/topics/:topicId" element={<ShowsPage user={user} />} />
+        <Route path="/shows/:showId" element={<EpisodesPage user={user} />} />
+        <Route
+          path="/episodes/:episodeId"
+          element={<EpisodePage user={user} />}
+        />
+        <Route
+          path="/modal1"
+          element={<AddToShowsPlaylistModal user={user} />}
+        />
+        <Route
+          path="/modal2"
+          element={<AddToEpisodesPlaylistModal user={user} />}
+        />
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
       <Footer />

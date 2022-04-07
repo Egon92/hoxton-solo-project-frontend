@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Profile-page.css";
 
-function ProfilePage() {
+function ProfilePage(props) {
   return (
     <div id="profile-page-wrapper">
       <div id="profile-page-header-wrapper">

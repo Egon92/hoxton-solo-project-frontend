@@ -1,6 +1,6 @@
 import "./Add-to-shows-playlist-modal.css";
 
-function AddToShowsPlaylistModal() {
+function AddToShowsPlaylistModal(props) {
   return (
     <div className="add-to-shows-playlist-modal-wrapper">
       <div className="add-to-shows-playlist-modal">

@@ -94,8 +94,11 @@
   padding-left: 1rem;
   cursor: pointer;
 }
+.playlist-and-likes-main-top-left-wrapper span.selected {
+  background-color: green;
+  color: yellow;
+}
 .playlist-and-likes-main-bottom-left-wrapper {
   display: grid;
   font-size: 50px;
 }
-
