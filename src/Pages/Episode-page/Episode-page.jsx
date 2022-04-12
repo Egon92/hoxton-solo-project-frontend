@@ -4,7 +4,7 @@ import "./Episode-page.css";
 
 function EpisodePage(props) {
   const [episode, setEpisode] = useState(null);
-
+  const [numberOfLikes, setNumberOfLikes] = useState(0);
   const params = useParams();
   useEffect(() => {
     fetch(`http://localhost:4000/episodes/${params.episodeId}`)
@@ -25,7 +25,11 @@ function EpisodePage(props) {
               placeholder="Search Topics, Shows or Episodes"
             />
             <button id="mag-glasss-button">
-              <img id="mag-glass-icon" src="" alt="" />
+              <img
+                id="mag-glass-icon"
+                src="/public/assets/search_black_36dp.svg"
+                alt=""
+              />
             </button>
           </div>
 
@@ -76,11 +80,15 @@ function EpisodePage(props) {
                 <span className="episode-length">{`${episode.length} min`}</span>
                 <img
                   className="episode-like-button"
-                  src="public/assets/thumb_up_white_24dp.svg"
+                  src="/public/assets/thumb_up_white_24dp.svg"
                   alt="like-icon"
+                  onClick={() => {
+                    setNumberOfLikes(numberOfLikes + 1);
+                  }}
                 />
                 <span className="episode-number-of-likes">
-                  {episode.numberofLikes}
+                  {/* {episode.numberOfLikes} likes */}
+                  {`setNumberOfLikes(numberOfLikes)`}likes
                 </span>
                 <span className="episode-add-to-your-playlist">
                   add to playlist
@@ -100,3 +108,6 @@ function EpisodePage(props) {
   );
 }
 export default EpisodePage;
+function setLikes(arg0) {
+  throw new Error("Function not implemented.");
+}

@@ -4,7 +4,7 @@
   gap: 0.2rem;
 }
 * {
-  outline: solid black 1px;
+  /* outline: solid black 1px; */
   text-decoration: none;
 }
 .App-logo {

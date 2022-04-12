@@ -20,8 +20,12 @@ function Topics() {
               id="topics-search-input"
               placeholder="Search Topics, Shows or Episodes"
             />
-            <button id="mag-glasss-button">
-              <img id="mag-glass-icon" src="" alt="" />
+            <button id="mag-glass-button">
+              <img
+                id="mag-glass-icon"
+                src="/public/assets/search_black_36dp.svg"
+                alt=""
+              />
             </button>
           </div>
 

@@ -29,10 +29,14 @@ header {
   border-radius: 3px;
   border: none;
 }
-#mag-glasss-button {
+#mag-glass-button {
   display: grid;
   place-content: center;
   width: 150px;
+}
+#mag-glass-icon {
+  display: grid;
+  place-content: center;
 }
 #lower-header {
   display: grid;

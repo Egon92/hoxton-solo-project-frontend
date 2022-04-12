@@ -17,7 +17,11 @@ function PlaylistAndLikesPage(props) {
               placeholder="Search Topics, Shows or Episodes"
             />
             <button id="mag-glasss-button">
-              <img id="mag-glass-icon" src="" alt="" />
+              <img
+                id="mag-glass-icon"
+                src="/public/assets/search_black_36dp.svg"
+                alt=""
+              />
             </button>
           </div>
 

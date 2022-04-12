@@ -24,7 +24,11 @@ function ShowsPage(props) {
               placeholder="Search Topics, Shows or Episodes"
             />
             <button id="mag-glasss-button">
-              <img id="mag-glass-icon" src="" alt="" />
+              <img
+                id="mag-glass-icon"
+                src="/public/assets/search_black_36dp.svg"
+                alt=""
+              />
             </button>
           </div>
 
@@ -63,7 +67,11 @@ function ShowsPage(props) {
                   <span className="show-title">{show.title}</span>
                   <span className="show-topic">{show.mediaProvider}</span>
                   <span className="show-likeIcon">
-                    <img id="like-icon" src="" alt="like-icon" />
+                    <img
+                      id="like-icon"
+                      src="/public/assets/thumb_up_white_24dp.svg"
+                      alt="like-icon"
+                    />
                   </span>
                   <span className="show-addToPlaylist">
                     Add to your shows-playlist
